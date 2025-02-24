@@ -15,7 +15,7 @@ async def main():
         
         workflow = await create_travel_workflow(llm, search_tool)
         
-        user_query = input("What would you like recommendations for? (e.g., 'tech conferences in Europe during spring 2025', 'warm winter destinations with direct flights from Boston', 'top beaches in Hawaii for snorkeling'): ")
+        user_query = input("What would you like recommendations for? (e.g., 'Tech conferences in Europe during spring 2025', 'Warm winter destinations with direct flights from Boston', 'Help me plan a trip to NYC, I want to experience the best food and museums'): ")
         
         result = await workflow.run(TravelState(query=user_query))
         
